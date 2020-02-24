@@ -1,0 +1,61 @@
+
+
+body {
+
+background : chocolate;
+
+} 
+
+p.artist {
+   font-size: 14px;
+   font-family: Arial; 
+   font-weight: bold;
+   color:  #FFE4B5; <!-- Moccasin hex color--> 
+  
+}
+
+p.songtitle {
+
+  font-size: 14px;
+  font-family: Arial;   
+  font-weight:normal;
+  color:#f0e68c; <!--Khaki hex color--> 
+  
+}
+
+p.album {
+
+  font-size: 12px;
+  font-family: Arial;   
+  font-weight:normal;
+  color:#f0e68c; <!-- Khaki hex color--> 
+  
+}
+
+p.year {
+ 
+  font-size: 12px;
+  font-family: Arial;  
+  font-weight:bold;
+  color:ivory; 
+}
+
+
+p.verse {
+  font-weight:bold;
+  font-size: 14px;
+  font-family: "Trecbuchet MS"; 
+  color:gold; <!-- Moccasin hex color--> 
+  margin-left: 2cm;
+  margin-right: 2cm;
+  
+}
+p.chorus{
+  font-weight:normal;
+  font-size: 14px;
+  font-family: "Trecbuchet MS"; 
+  color:gold; <!-- Moccasin hex color--> 
+  margin-left: 4cm;
+  margin-right: 4cm;
+  
+}
