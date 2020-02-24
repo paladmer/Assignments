@@ -1,0 +1,71 @@
+h1 {
+	text-align: center; 
+}
+
+h2 {
+	text-align: center; 
+}
+
+img {
+	float: right;
+	width: 200px;
+}
+
+#mainContent {
+	width: 70%;
+	text-align: left;
+	display: flex;
+	
+} 
+
+#mainContent div {
+ 
+  flex-basis: 33%;
+}
+
+
+#mainContent div:nth-of-type(2) {
+  flex-basis: 67%;
+}
+
+
+h3 {
+	text-align:center;
+}
+
+div {
+  width: 70%;
+  
+  
+}
+
+h3 {
+	font-size: 20px;
+	text-align: left;
+	
+}
+
+.flex-container {
+  display: flex;
+  background-color: #ffff;
+}
+
+.flex-container > div {
+  background-color: #ffff;
+  margin: 2em;
+  padding: 2em;
+  font-size: 20px;
+  border-style: dashed;
+  border-width: 4px;
+  border-color: red; 
+ 
+}
+
+div.static {
+  position: fixed;
+  bottom: 5px;
+}
+
+p.clear {
+	  clear: both;
+}
