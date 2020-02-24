@@ -1,0 +1,33 @@
+
+div {
+	border: 5px solid;
+	
+}
+
+#greenBorder{
+	
+	
+	border-color: green;
+	
+}
+
+#redBorder{
+	border-color: red;
+	
+}
+
+#orangeBorder{
+	border-color: orange;
+	
+}
+
+
+#blueBorder{
+	border-color: blue;
+	
+}
+
+#purpleBorder{
+	border-color: purple;
+	display: inline-block;
+}

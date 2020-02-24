@@ -1,0 +1,43 @@
+
+div {
+	border: 5px solid;
+	
+}
+
+#greenBorder{
+	
+	
+	border-color: green;
+	background-color: white; 
+}
+
+#redBorder{
+	border-color: red;
+	
+}
+
+#orangeBorder{
+	border-color: orange;
+	
+}
+
+#blueBorder{
+	border-color: blue;
+	background-color:#E8FBFB;
+	padding: 5px;
+	margin-top: 10px;
+	
+}
+
+#purpleBorder{
+	border-color: purple;
+	display: inline-block;
+}
+
+body {
+	background-image: url ("background.gif")
+	margin-left: 10%;
+	margin-right: 10%;
+	
+	
+}
