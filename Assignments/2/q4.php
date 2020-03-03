@@ -6,7 +6,7 @@
 
 
 
-<h1>Question 3: 10 Best Resturants in Atlanta</h1>
+<h1>Question 4: 10 Best Resturants in Atlanta</h1>
 <?php
 
 $rows = 11; 
