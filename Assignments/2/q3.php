@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>Question 2: Arrays</h1>
+<h1>Question 3: Arrays</h1>
 
 <?php
 
