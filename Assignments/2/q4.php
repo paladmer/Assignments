@@ -42,6 +42,7 @@ echo '</table>';
 
 
 /**Alphabetical**/
+/** assoc. array**/
 $arrays =  array('Chama Gaucha'=>'40.50',
 			    'Aviva by Kameel'=>'15.00', 
                 'Bone’s Restaurant'=>'65.00', 
@@ -56,6 +57,8 @@ $arrays =  array('Chama Gaucha'=>'40.50',
 echo "<table border='1'>"; 
 echo "<h3> Alphabetical Order: A to Z </h3>";
 function isAlphabet($arrays, $rows, $columns){
+	
+/**Sorting Order = type 4**/
  ksort($arrays, 4); 
             
  for ($r=1; $r<$columns ;$r++ ){
@@ -82,7 +85,7 @@ echo "                                                                <br>";
 echo "                                                                <br>";
 }
 
-
+/** Price Order**/
 function isPrice($arrays,$rows,$columns){
 	asort($arrays);
     
