@@ -14,10 +14,6 @@ function textareaRet($testarea){
 }
 
 
-$fontt = "ComicSansMS"; 
-if($_GET['font']==$fontt ){
-	echo "cow"; 
-}
 
 
 echo $testarea; 
