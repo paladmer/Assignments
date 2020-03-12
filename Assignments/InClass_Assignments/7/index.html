@@ -1,0 +1,184 @@
+<html>
+
+<h1>In Class Assignment 7</h1>
+<head>
+
+
+<h3>Exercise 1</h3>
+
+	<script type="text/javascript">
+	
+	// Fibonacci Nums
+		var numA=0;
+		var numB=1;
+		var count= 11; // First 11 terms
+		
+		document.write("First " + count + " Terms: ");
+		document.write('<br /><br />');
+		
+	for ( var i = 1 ; i <=count; i++){
+			first =numA;
+			document.write(numA);
+			
+			// Takes away that last Plus
+			var plus=count;
+			plus=plus-1;
+			if (i<=plus){
+			document.write("+");
+			}
+				var total=0;
+				total=numA+numB;
+				numA=numB;
+				numB=total; 
+	}
+	
+
+
+
+	</script>
+
+<h3>Exercise 2</h3>
+	<script type="text/javascript">
+
+	// Stars exercise
+	for( var x = 1; x <= 5; x++){
+			for( var y = 1; y <= x; y++){
+				document.write(" * ");
+			}
+		document.write('<br />');
+	  }
+		
+	</script>
+
+
+<h3>Exercise 3</h3>
+	<script type="text/javascript">
+
+	// Sort items of array
+	var arr1 = [ 3 , 8 , 7, 6 ,5, -4, 3 , 2 , 1]; 
+	document.write("Original Array: "+ arr1 +" "+  '<br />');
+	arr1_sorted= arr1.sort(); 
+	document.write("Sorted Array: "+arr1_sorted +" "); 
+	
+		
+	</script>
+	
+<h3>Exercise 4</h3>
+	<script type="text/javascript">
+
+	// Find most frequent item of array
+	
+	var array_freq =[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a',2, 4, 9, 3];
+	
+	document.write("Array: " + array_freq + '<br/>');
+	array_Sorted= array_freq.sort();
+	
+	document.write("Sorted Array: " + array_Sorted  + '<br/>');
+	
+
+		var tempArray = []; 
+		var item = array_Sorted[0];
+		var freq = 1;
+		var maxItem = item  //assign the first item as the max item
+		var maxFreq = freq;  //assign the first item freq to 1
+;
+
+		for (let r= 1; r< array_Sorted.length; r++){
+			if (array_Sorted[r]===item) {
+				freq++;
+			}else{
+				tempArray.push(item + " : " + freq + " freq" + '<br/>');
+				item = array_Sorted[r];
+				freq = 1;
+			}
+			if (r===array_Sorted.length-1){
+				tempArray.push(item + " : " + freq + " freq");
+			}
+			if (freq>maxFreq){
+				maxFreq=freq;
+				maxItem=item;
+			}
+		}
+	
+	// Uncomment to check occurences. 
+	//document.write('<br>'+ "Item : # of frequencey" + '<br/>');
+	//document.write(tempArray +'<br/>');
+	
+
+
+	document.write('<br/>'+ "The item with the most occurences: " + maxItem +'<br/>');
+	document.write("# of Frequency: " + maxFreq);
+	
+	
+	
+	
+	</script>
+
+
+<h3>Exercise 5</h3>
+	<script type="text/javascript">
+
+	// Shuffle array of 6 int val
+	var arr1 = [ 3 , 8 , 7, 6 ,5, -4]; 
+	document.write("Original Array: "+ arr1 +" "+  '<br />');
+		
+		var count = arr1.length; 
+		
+		while(count!=0){
+        
+        //random index to start with
+		 var randomize = Math.floor(Math.random()*arr1.length);
+		 
+			count--; 
+			
+			// Swapping values and positions
+			var placeholder = arr1 [count];
+			arr1[count] = arr1[randomize];
+			arr1[randomize]= placeholder; 
+            
+           
+		}
+		arr1_decision= arr1; 
+	    document.write("Random shuffle Array: "+ arr1_decision  +" "); 
+		
+	</script>
+
+
+<script>
+		function validateForm_JS(vForm) {
+				var tempName = [];
+			if ((vForm.id.value == "") || (vForm.firstname.value == "") || (vForm.lastname.value == "")) {
+				if (vForm.id.value == ""){
+					tempName.push("ID");
+				};
+				if (vForm.firstname.value == ""){
+					tempName.push("FirstName");
+				};
+				if (vForm.lastname.value == ""){
+					tempName.push("LastName")
+				};
+				alert("You forgot to fill in the following field(s) " + tempName.join(" , "));
+				return false;
+			}else{
+				// alert("OK");
+				return true;
+			};
+		}
+</script>
+
+
+
+<body>
+<h2> JAVASCRIPT FORMS </h2> <br>
+	<form id="form1" name="form1" onsubmit="return validateForm_JS(this)" method="POST">
+
+			ID: <input style.left="100px" type="text" name="id"> <br><br>
+			FirstName: <input type="text" name="firstname"> <br><br>
+			LastName: <input type="text" name="lastname"> <br><br>
+			<button type="submit" name="button" form="form1">Add</button>
+
+	</form>
+
+
+</body>
+</html>
