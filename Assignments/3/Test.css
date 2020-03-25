@@ -1,0 +1,42 @@
+body{
+	font-family: arial;
+}
+
+
+.lbl{
+	position: absolute;
+	right: 53%;
+}
+
+.lbl-red{
+	color: red;
+	position: absolute;
+	right: 53%;
+}
+
+.usr{
+	position: absolute;
+	left: 48%
+}
+
+.lg-box{
+	width: 20%;
+}
+
+.red{
+	color: red;
+}
+
+.invalid{
+	color: red;
+}
+
+.sml-box{
+	width: 3%;
+}
+
+#makeBorder {
+	border-style: outset; 
+	padding: 30px;
+		/*padding: 30px 30px 30px 30px;*/
+}
