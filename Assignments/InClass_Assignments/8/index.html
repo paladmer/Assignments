@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> In Class Activity 8 : My SQL </title>
+</head>
+
+<body>
+
+<h1> In Class Activity 8: My SQL </h1> 
+
+<h3> Question 1: </h3>
+<P> Create a Products table. The structure is given in the following image </P> <br><br>
+<img src="q1_a.PNG" alt="N/A" > 			 		 <BR>
+
+
+<P> a) Product id is auto increment. This is also a primary key.<br>
+b) ProductName is NOT NULL<br>
+c) SupplierID, CategoryID, QuantityPerUnit default values are NULL<br>
+d) UnitPrice default value is 0.0000<br>
+e) UnitsInStock , UnitsOnOrder, ReorderLevel default values are 0<br>
+f) Discontinued, NOT NULL and default value set to b'0'<br> <br> 
+
+The result after you created table would be; Screenshot of table created and use
+the command SHOW tablename and take the screenshot of the empty table!</P>
+
+<h3> ANSWER SCREENSHOT: </h3>			             <BR>
+
+<P> Note: Shows creating table. </P> 			     <BR>
+<img src="q1_a1.PNG" alt="N/A" > 			 		 <BR>
+<img src="q1_a2.PNG" alt="N/A" > 			 		 <BR>
+
+<P> Note: Shows Empty Table. </P>					 <BR>
+<img src="q1_a3.png" alt="N/A" > 			 		 <BR>
+<img src="q1_a4.png" alt="N/A" > 			 		 <BR>
+
+
+<h3> QUERY USED (CODE Below): </h3>			     
+
+CREATE TABLE Products (   						 <BR>
+ProductID INT(11) NOT NULL AUTO_INCREMENT,		 <BR>
+ProductName VARCHAR(40) NOT NULL,			     <BR>
+SupplierID INT (11) NULL,			 			 <BR>
+CategoryID INT (11) NULL, 						 <BR>
+QuantityPerUnit VARCHAR(20) NULL,			     <BR>
+UnitPrice DECIMAL (10,4) DEFAULT 0.0000,		 <BR>
+UnitsInStock SMALLINT (2) DEFAULT 0,			 <BR>
+UnitsOnOrder SMALLINT(2) DEFAULT 0,				 <BR>
+ReorderLevel SMALLINT(2) DEFAULT 0,				 <BR>
+Discontinued BIT(1) NOT NULL DEFAULT 0,			 <BR>
+PRIMARY KEY (ProductID) 						 <BR>
+);												 <BR>
+
+
+
+
+
+<h3> Question 2: </h3>
+<P>If you create 1, right; you can directly use the following lines to insert
+values/ rows into the table. If you don’t get 1 right, you will have to figure
+out, where you went wrong and then add the 77 rows into your table. </P>
+
+
+<h3> ANSWER SCREENSHOT: </h3>			            		  <BR>
+<img src="q2_all.png" alt="N/A" > 			 		 		  <BR>
+
+
+<h3> QUERY USED (CODE Below): </h3>			         
+<P> Note: It was written in the assignment document. The rest is in the document. </P> <BR>
+<img src="q2_all2.png" alt="N/A" > 			 		      <BR>
+
+
+
+<h3> Question 3: </h3>
+<P>Write a query to get Product name and quantity/unit. </P>
+
+<h3> ANSWER SCREENSHOT: </h3>			            	  <BR>
+<img src="q3_all.png" alt="N/A" > 			 		      <BR>
+
+<h3> QUERY USED (CODE Below): </h3>			       
+<P> SELECT ProductName, QuantityPerUnit FROM Products; </P>
+
+
+
+<h3> Question 4: </h3>
+<P>Write a query to get current Product list (Product ID and name)</P>
+ 
+ 
+<h3> ANSWER SCREENSHOT: </h3>			            	  <BR>
+<img src="q4_a1.PNG" alt="N/A" > 			 		      <BR>
+<img src="q4_a2.PNG" alt="N/A" > 			 		      <BR>
+ 
+<h3> QUERY USED (CODE Below): </h3>			       
+<P> 
+SELECT ProductID, ProductName 	<BR>
+FROM Products					<BR>
+WHERE Discontinued = 0	<BR>
+ORDER BY ProductName;			<BR>
+
+
+ 
+<h3> Question 5: </h3>
+<P>Write a query to get discontinued Product list (Product ID and name).</P>
+
+
+<h3> ANSWER SCREENSHOT: </h3>			            	  <BR>
+<img src="q5.PNG" alt="N/A" > 			 		          <BR>
+
+
+
+
+<h3> QUERY USED (CODE Below): </h3>	
+<P> 
+SELECT ProductID, ProductName 	<BR>
+FROM Products 					<BR>
+WHERE Discontinued = TRUE  		<BR>
+ORDER BY ProductName; 			<BR>
+</P>
+
+
+
+<h3> Question 6: </h3>
+<P>Write a query to get most expense and least expensive Product list (name
+and unit price)</P>
+
+
+<h3> ANSWER SCREENSHOT: </h3>			            	  <BR>
+<img src="q6.PNG" alt="N/A" > 			 		          <BR>
+
+
+<h3> QUERY USED (CODE Below): </h3>	
+<P> 
+SELECT ProductName, UnitPrice  <BR>
+FROM Products 				   <BR>
+ORDER BY UnitPrice desc;       <BR>
+</P>
+
+
+
+
+
+
+
+<h3> Question 7: </h3>
+<P>Write a query to get Product list (id, name, unit price) where current
+products cost less than $20.</P>
+
+
+<h3> ANSWER SCREENSHOT: </h3>			            	  <BR>
+<img src="q7.PNG" alt="N/A" > 			 		          <BR>
+
+
+<h3> QUERY USED (CODE Below): </h3>	
+<P> 
+SELECT ProductID, ProductName, UnitPrice
+FROM Products
+WHERE (((Discontinued)= 0) AND ((UnitPrice)<20))
+ORDER BY UnitPrice desc;
+</P>
+
+
+
+
+
+<h3> Question 8: </h3>
+<P> Write a query to get Product list (id, name, unit price) where products cost
+between $15 and $25.</P>
+
+
+
+
+
+
+
+
+
+
+
+<h3> Question 9: </h3>
+<P>9) Write a query to get Product list (name, unit price) of above average price.</P>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> Question 10: </h3>
+<P>10) Write a query to get Product list (name, unit price) of ten most expensive products.</P>
+
+
+
+
+
+
+
+
+
+
+<h3> Question 11: </h3>
+<P>11) Write a query to count current and discontinued products.</P>
+
+
+
+
+
+
+
+
+
+
+
+<h3> Question 12: </h3>
+<P>Write a query to get Product list (name, units on order , units in stock) of
+stock is less than the quantity on order.</P>
+
+
+</body>
+</html>
