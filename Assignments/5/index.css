@@ -1,0 +1,66 @@
+div.a {
+
+ font-size: 300 px; 
+ background: rgb(84,38,116);
+ overflow: hidden; 
+ text-align: center;
+ position: absolute; 
+ background-size: cover; 
+ top: 0; 
+ left: 0;
+ background: linear-gradient(4deg, rgba(84,38,116,1) 0%, rgba(149,149,149,1) 0%, rgba(173,173,173,1) 36%, rgba(255,255,255,1) 80%);
+}
+
+@font-face {
+   font-family: someFont;
+   src: url(peacehoustonsemital.ttf);
+}
+
+* {
+   font-family: someFont;
+}
+
+
+nikeimg {
+  width: 30%;
+  height: auto;
+}
+
+otherimg {
+  width: 50%;
+  height: auto;
+}
+
+
+otherimg2 {
+  width: 100px;
+ 
+  height: auto;
+}
+
+body {
+	text-size: xxx-large; 
+	
+} 
+
+
+.fixed_navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 225px;
+  height: 100px;
+  background-color: white;
+}
+
+
+a.tabs {
+   font-size: 25px;
+   font-weight: normal;
+   color:  black;
+   float: right;
+   text-decoration: none;
+  
+}
+
