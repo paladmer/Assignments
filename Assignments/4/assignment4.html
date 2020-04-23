@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body> 
+<title> Assignment 4 </title>
+<head> Assignment 4 </head> 
+
+<h1>Simple Guessing Game :Part B </h1> 
+<p>Welcome! Try to guess a number between 1-100!</p> 
+  
+<form> 
+    <label for="pGuess">What number do you want to guess?: </label> 
+    <input type = "text" id = "pGuess" class = "pGuess"> 
+    <input type = "submit" value = "Guess!" 
+           class = "playGuess" id = "guessFunction"> 
+</form> 
+  
+<script> 
+  
+     var playerGuess = document.getElementById("pGuess").value; 
+     var attempts = 3;  // maximum of 3 attempts
+     var secretNum = Math.floor(Math.random() * 100)+1; //random number generator
+    
+
+    var attempt = 1; 
+    
+
+
+    // Code block to determine correcness of user's guess 
+    document.getElementById("guessFunction").onclick = function(){ 
+		
+    		  if(playerGuess == secretNum) {     
+                 alert("Correct! This was your " + attempt + " attempt"); 
+				 attempt++;
+                 attempts--; 
+             } 
+              else if(playerGuess < secretNum) {     
+                 alert("Incorrect! Your guess is too low of a number" + " This was your " + attempt +" attempt" ); 
+                 attempts--; 
+				 attempt++;
+             } 
+              else{
+                 alert("Incorrect! Your guess is too high of a number" + " This was your" + attempt +" attempt"); 
+                 attempts--; 
+				 attempt++;
+             } 
+			 
+			
+} 
+</script> 
+</body>
+</html> 
