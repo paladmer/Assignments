@@ -17,21 +17,4 @@ void main() {
     printf("sum2= %d\n",sum2);
 }
 
-/*Explanation of results:
-    sum1 = (10 / 2) + 3*(10+4)-1  
-         = 5 + 41
-         = 46  
-         
-    sum2 = 3*(10+4)-1 + 14/2
-         = 41 + 7 
-         = 48
-    Since it is evaluated from left to right, i/2 is seen as (10/2).
-    Because the variable J is passed by reference after the function call, 
-    its value is changed to 10 + 4. This explains the change.
 
-If there was no precedence: 
-    The answer would differ if one evaluated from right to left. 
-     sum 2 would be 46 and sum 1 would be 48.
-
-
-*/
