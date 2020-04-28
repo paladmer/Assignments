@@ -1,0 +1,152 @@
+<?php 
+
+session_start();
+$servername = "localhost"; 
+$username = "mpalad1"; 	   
+$password = "mpalad1";     
+$dbname = "mpalad1";       
+//Comment: The professor told us to use this code. It makes a connection variable called "conn". It passes the arguments. 
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+//Comment: This checks the connection. If it fails, it will echo the fail result, otherwise it was successful. 
+//accesses an instance property /object-orientated
+// 
+		if ($conn->connect_error()) {
+			echo "Connection failed.";
+		} else {
+			echo "Connection Successful";
+		}
+/**
+		if (isset($_POST['submit'])) {
+			session_start();
+			$username = mysql_real_escape_string($_POST['username']);
+			$password = mysql_real_escape_string($_POST['password']);
+			$password_2 = mysql_real_escape_string($_POST['password_2']);
+		} 
+			//MySQL MD5() Calculates an MD5 128-bit checksum for a string. 
+			//The value is returned as a binary string of 32 hex digits ; return value useful for hash key.
+		if ($password != $password_2) {
+				//failed the confirmation
+				$_SESSION['message'] = "Please try again. The passwords don't match!"; 
+		} else {
+			// passes and so you need to create user.  
+		 $password = md5($password_2); // this hashes the password 
+		 $sqlcommand = "INSERT INTO database3(Username,Password,Password2) VALUES ('$username', '$password')"; 
+		 mysql_query($dbname,$sqlcommand); 
+		 
+		}
+
+
+
+**/ 
+
+
+?>
+
+
+/** 
+
+<!DOCTYPE html>
+
+
+<?php
+
+$servername = "localhost"; 
+$username = "mpalad1"; 	   
+$password = "mpalad1";     
+$dbname = "mpalad1";  
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+		if (isset($_POST['submit'])) {
+			$username =($_POST['username']);
+			$password =($_POST['password']);
+			$password_2 = ($_POST['password_2']);
+			
+			echo "Hello, " ;
+			echo $username ; 
+			echo "! " ; 
+			
+		} 
+	
+
+
+// Check connection
+if ($conn->connect_error) {
+    echo "FAIL";
+	die(); 
+}
+	echo "SUCCESS";
+	
+	
+	
+?>
+
+
+<html>
+	<head>
+		<title>
+		New User Form
+		</title>
+	</head>
+<body>
+
+<!--This is the form for the users to input their data.-->
+
+<link rel="stylesheet" type="text/css" href="Test.css">
+
+<div align="center" > 
+	<div class="newUser"> <h1>New User Log In: </h1> </div>
+		<p id="smallSize" id="diffFont"></p>
+			<div id="makeBorder">  
+						
+			<form method="POST" action="uservalidate2.php">
+				
+				
+				    <p> New User Registration </p> 
+					<p> Fill in the information below. </p> 
+			
+
+					<label class="lbl">UserName: </label>
+					<input class="usr lg-box" type="text/css" name="username" placeholder="Username" required><br><br>
+					
+					<label class="lbl">Password: </label>
+					<input class="usr lg-box" type="text/css" name="password" placeholder="Password" required><br><br>
+					
+					<label class="lbl">Retype Password for Confirmation: </label>
+					<input class="usr lg-box" type="text/css" name="password_2" placeholder="Confirm Password" required><br><br>
+					
+					<input class="usr"  type="submit" name="submit" value="Register" > <br> <br> <br> 
+					
+			
+			
+					
+				</form>
+				
+			</div>
+</div>
+
+
+
+</body>
+</html>
+**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

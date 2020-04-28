@@ -9,11 +9,13 @@
 	<div class="bgimage"></div>
 	<img src="GEMSTONES.png" class="centerImg">
 	<div id="loginSpace">
-		<img src="login.gif" alt="Alternative Text" class="centerImg smallerGif" onclick="checkLocalData()">
+		<a href="login_screen.html"> 
+		<img src="login.gif" alt="Alternative Text" class="centerImg smallerGif" onclick="login_screen.html">
+		</a> 
 	</div>
 	<script type="text/javascript">
 
-		var userid = getCookie("userid");
+	/**	var userid = getCookie("userid");
 		var loginSpace = document.getElementById("loginSpace");
 		if (userid != null) {
 			loginSpace.innerHTML = "Welcome back, " + userid + "!";
@@ -47,8 +49,8 @@
 		    else {
 		        loginSpace.innerHTML = "" + userid;
 		    }
-		}
-	</script>
+		} **/
+	</script> 
 	
 	<br>
 	<A HREF ="startscreen.html">
