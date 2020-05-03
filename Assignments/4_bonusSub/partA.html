@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 4</title>
+</head>
+
+<script src="partA.js"> </script>
+<link rel="stylesheet" type="text/css" href="assignment4_v2.css">
+
+<body class ="modern">
+
+			<div style="text-align:right">		
+			<a href="partA.html">[Part A: Payroll Report] </a> 
+			<a href="http://codd.cs.gsu.edu/~mpalad1/Assignment4/assignment4.html?">[Part B: Simple Guessing Game] </a> 
+			<a href="partC.html">[Part C: Game] </a> 
+			<a href="http://codd.cs.gsu.edu/~mpalad1/Assignments/1/index.html">[MP homepage] </a> 
+			<a href="index.html">[Assignment 4 index] </a> 
+			</div>
+
+	<div style="text-align:center">
+		<h1> Assignment 4 : Part A </h1> 
+		</div>
+		
+		<table border="12" bordercolor="purple" >
+		<tr>
+			<td>Index of Employee</td>
+			<td>Hours Worked (Week)</td>
+			<td>Pay (Week)</td>
+			
+			
+		</tr>
+	<br>
+		<tr>
+			
+			<td>Jane Doe</td>
+			
+			<td>38 <p id="button1"></p>
+			</td>
+			
+			<td>$570 
+
+		
+			</td>
+		</tr>
+		
+	</table>
+		
+		
+		
+<button onclick="thisFunction()">Click here to edit # of hours worked</button>
+
+<p id="button1"></p>
+
+<script>
+function thisFunction() {
+  var message;
+  var subject = prompt("Enter # of hours worked", "#");
+  if (subject == null || subject == "" || subject =="-1") {
+    message = "User has exited";
+  } else {
+	var subject2 = subject *15; 
+    message = "The number " + subject + "hours has been recorded. The employee would get $" +subject2;
+	
+  }
+  document.getElementById("button1").innerHTML = message;
+}
+</script>
+			
+	 
+	 
+	 
+	 
+	 
+
+
+</body>
+</html>

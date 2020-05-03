@@ -1,0 +1,32 @@
+
+html {
+height: 100%;
+background-size: cover;
+background: rgb(187,212,255);
+background: linear-gradient(0deg, rgba(187,212,255,1) 29%, rgba(255,255,255,1) 100%);
+background-repeat: no-repeat;
+background-size: cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+}
+
+@font-face {
+  font-family: fontToUse;
+  src: url(Rounded_Elegance.ttf);
+
+}
+
+body.modern {
+	font-family: fontToUse; 
+}
+
+
+
+
+td {
+	border: 8px solid blue ; 
+	height:  200px; 
+	width: 200px;
+	
+}
